@@ -1,10 +1,11 @@
 import React from 'react';
+import { getRestaurants, Restaurant } from '@/services/api';
+import { Tabs } from '@/components/tabs/component';
 
-const RestaurantsPage = () => {
+const RestaurantsPage = async () => {
+	const restaurants: Restaurant[] = await getRestaurants();
 	return (
-		<div>
-			Neo
-		</div>
+		<Tabs restaurants={restaurants}/>
 	);
 };
 
