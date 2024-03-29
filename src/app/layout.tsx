@@ -1,21 +1,30 @@
-import Link from 'next/link';
+import 'normalize.css';
 import '@/app/ui/global.css';
+import { StoreProvider } from '@/redux/store-provider';
+import { Header } from '@/components/header/component';
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+export default function RootLayout({children}: Readonly<{
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>
-      <header>
-          <Link href='/'>Главная</Link>
-          <Link href='/restaurants'>Рестораны</Link>
-      </header>
-      <main className='container'>{children}</main>
-      <footer>footer</footer>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body>
+                <div className="layout">
+                    <div className='container'>
+                        <Header></Header>
+
+                        <StoreProvider>
+                            {children}
+                        </StoreProvider>
+                    </div>
+                </div>
+
+                <footer>
+                    <div className='container'>
+                        Телефон для связи: 44-44-44
+                    </div>
+                </footer>
+            </body>
+        </html>
+    );
 }

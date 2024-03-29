@@ -1,0 +1,23 @@
+.header {
+  display: grid;
+  grid-template-columns: 100px auto 300px;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  margin-bottom: 30px;
+  a:not( :last-child) {
+    margin-right: 20px;
+  }
+  a {
+    color: #eea316;
+
+  }
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    color: #eea316;
+    font-family: "Fira Code", sans-serif;
+  }
+}

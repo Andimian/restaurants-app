@@ -1,12 +1,17 @@
-import { FC, ReactNode } from 'react';
+'use client';
+
+import { FC, ReactElement, ReactNode } from 'react';
 
 type Props = {
 	onClick: () => void,
-	children?: ReactNode,
+	title: string,
+	children?: ReactElement<any, any>,
+	disabled?: boolean,
+	className?: string,
 }
 
-export const Button: FC<Props> = ({onClick, children}) => {
+export const Button: FC<Props> = ({onClick, children, className}) => {
 	return (
-		<button onClick={onClick}>{children}</button>
+		<button onClick={onClick} className={className}>{children}</button>
 	);
 };
