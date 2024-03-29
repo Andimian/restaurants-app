@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import '@/app/ui/global.css';
 
 export default function RootLayout({
   children,
@@ -12,7 +13,7 @@ export default function RootLayout({
           <Link href='/'>Главная</Link>
           <Link href='/restaurants'>Рестораны</Link>
       </header>
-      <div>{children}</div>
+      <main className='container'>{children}</main>
       <footer>footer</footer>
       </body>
     </html>
