@@ -9,23 +9,23 @@ export default function RootLayout({children}: Readonly<{
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className}`}>
-                <div className="layout">
-                    <div className='container'>
-                        <Header></Header>
+        <body className={`${inter.className}`}>
+        <div className="layout">
+            <div className='container'>
+                <Header></Header>
 
-                        <StoreProvider>
-                            {children}
-                        </StoreProvider>
-                    </div>
-                </div>
+                <StoreProvider>
+                    {children}
+                </StoreProvider>
+            </div>
+        </div>
 
-                <footer>
-                    <div className='container'>
-                        Телефон для связи: 44-44-44
-                    </div>
-                </footer>
-            </body>
+        <footer>
+            <div className='container'>
+                Телефон для связи: 44-44-44
+            </div>
+        </footer>
+        </body>
         </html>
     );
 }
