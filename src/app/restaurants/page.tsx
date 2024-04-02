@@ -1,11 +1,15 @@
 import React from 'react';
-import { getRestaurants, Restaurant } from '@/services/api';
-import { Tabs } from '@/components/tabs/component';
+import { lusitana } from '@/app/ui/fonts';
 
 const RestaurantsPage = async () => {
-	const restaurants: Restaurant[] = await getRestaurants({withoutCache: false});
-	return (
-		<Tabs restaurants={restaurants}/>
+	// const restaurants: Restaurant[] = await getRestaurants({withoutCache: false});
+	return (<>
+			{/*<Tabs restaurants={restaurants}/>*/}
+			<p className={ lusitana.className }>
+				 Тест шрифта
+			</p>
+	</>
+
 )
 	;
 };

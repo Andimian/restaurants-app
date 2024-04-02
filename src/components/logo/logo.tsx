@@ -1,6 +1,6 @@
 'use client';
 
-import logo from './../../assets/img/logo.png';
+import logo from '../../assets/img/main-logo.png';
 import styles from './style.module.scss';
 import Image from 'next/image';
 

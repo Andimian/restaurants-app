@@ -13,7 +13,7 @@ export const Tabs: FC<Props> = ({restaurants}) => {
 	return (
 		<div>
 			{restaurants.map((restaurant) => (
-				<Link href={`/restaurants/${restaurant.id}`}>
+				<Link key={restaurant.id} href={`/restaurants/${restaurant.id}`}>
 					{restaurant.name}
 				</Link>
 			))}
